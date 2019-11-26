@@ -1,0 +1,16 @@
+PODS:
+  - MarkdownView (1.6.0)
+
+DEPENDENCIES:
+  - MarkdownView
+
+SPEC REPOS:
+  trunk:
+    - MarkdownView
+
+SPEC CHECKSUMS:
+  MarkdownView: 25c1c2d7ff9706624a575556296e188be3dd3f6b
+
+PODFILE CHECKSUM: 5039c68d45a7dae703feeb5be99674a5832a46a7
+
+COCOAPODS: 1.8.4
