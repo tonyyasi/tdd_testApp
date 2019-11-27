@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-Q3-5Hy">
-                                <rect key="frame" x="10" y="444" width="394" height="141.5"/>
+                                <rect key="frame" x="10" y="444" width="394" height="140.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="int main() {}">
@@ -29,18 +29,23 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-Av-DsI">
-                                <rect key="frame" x="103" y="812" width="208" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="DUg-Av-DsI">
+                                <rect key="frame" x="59" y="811" width="296.5" height="31"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pA-7p-6cq">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
-                                        <state key="normal" title="Compile"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAF-iR-VZf">
+                                        <rect key="frame" x="0.0" y="0.0" width="29.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIs-GN-1VV">
+                                        <rect key="frame" x="123.5" y="0.0" width="51" height="31"/>
                                         <connections>
-                                            <action selector="onCompileClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMb-vp-VId"/>
+                                            <action selector="changeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="mJz-0R-ozw"/>
                                         </connections>
-                                    </button>
+                                    </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bt-zg-2uw">
-                                        <rect key="frame" x="151" y="0.0" width="57" height="30"/>
+                                        <rect key="frame" x="266.5" y="0.0" width="30" height="31"/>
                                         <state key="normal" title="Run"/>
                                         <connections>
                                             <action selector="onRunClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIq-xo-5sN"/>
@@ -49,14 +54,17 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-3y-PAS">
-                                <rect key="frame" x="10" y="595.5" width="414" height="109"/>
+                                <rect key="frame" x="10" y="594.5" width="414" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="109" id="7JD-MT-nDI"/>
                                 </constraints>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLn-cs-n5F">
-                                <rect key="frame" x="83.5" y="709.5" width="320.5" height="92.5"/>
+                                <rect key="frame" x="83.5" y="708.5" width="130.5" height="92.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130.5" id="arE-zr-Xu6"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -69,14 +77,21 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a11-00-shx">
-                                <rect key="frame" x="10" y="745.5" width="53.5" height="20.5"/>
+                                <rect key="frame" x="10" y="744.5" width="53.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHh-jZ-kbz">
+                                <rect key="frame" x="245" y="706.5" width="159" height="96.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cHh-jZ-kbz" firstAttribute="leading" secondItem="jLn-cs-n5F" secondAttribute="trailing" constant="31" id="7LQ-IU-f3n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TUp-Q3-5Hy" secondAttribute="trailing" constant="10" id="7pN-ST-fJZ"/>
                             <constraint firstItem="5VS-3y-PAS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="E2y-bE-pxS"/>
                             <constraint firstItem="5VS-3y-PAS" firstAttribute="top" secondItem="TUp-Q3-5Hy" secondAttribute="bottom" constant="10" id="QoY-Zt-ajU"/>
@@ -84,21 +99,25 @@
                             <constraint firstItem="a11-00-shx" firstAttribute="top" secondItem="5VS-3y-PAS" secondAttribute="bottom" constant="41" id="W0y-8i-maQ"/>
                             <constraint firstItem="TUp-Q3-5Hy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="WI1-SA-PHo"/>
                             <constraint firstItem="DUg-Av-DsI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X2c-BB-b5b"/>
+                            <constraint firstItem="cHh-jZ-kbz" firstAttribute="centerY" secondItem="jLn-cs-n5F" secondAttribute="centerY" id="atj-N7-jK7"/>
                             <constraint firstItem="a11-00-shx" firstAttribute="centerY" secondItem="jLn-cs-n5F" secondAttribute="centerY" id="b7F-Ke-PyP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cHh-jZ-kbz" secondAttribute="trailing" constant="10" id="bCT-Ih-xoc"/>
                             <constraint firstItem="jLn-cs-n5F" firstAttribute="leading" secondItem="a11-00-shx" secondAttribute="trailing" constant="20" id="dLw-63-QAu"/>
                             <constraint firstItem="5VS-3y-PAS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="g21-Ck-YYB"/>
                             <constraint firstItem="jLn-cs-n5F" firstAttribute="top" secondItem="5VS-3y-PAS" secondAttribute="bottom" constant="5" id="iQS-ea-ZEZ"/>
                             <constraint firstItem="DUg-Av-DsI" firstAttribute="top" secondItem="jLn-cs-n5F" secondAttribute="bottom" constant="10" id="na9-YM-fbG"/>
                             <constraint firstItem="a11-00-shx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nzJ-Oh-7Vl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLn-cs-n5F" secondAttribute="trailing" constant="10" id="pMF-ny-hIc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DUg-Av-DsI" secondAttribute="bottom" constant="20" id="wac-og-Q1K"/>
+                            <constraint firstItem="DUg-Av-DsI" firstAttribute="top" secondItem="cHh-jZ-kbz" secondAttribute="bottom" constant="8" id="x6d-Rf-VHL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="codeTextView" destination="TUp-Q3-5Hy" id="VyA-vK-4Ac"/>
+                        <outlet property="inputTextView" destination="cHh-jZ-kbz" id="aR1-g5-9xV"/>
                         <outlet property="outputTextView" destination="jLn-cs-n5F" id="eXf-QO-NpD"/>
                         <outlet property="pickerView" destination="5VS-3y-PAS" id="NRn-y8-sZi"/>
+                        <outlet property="testSwitch" destination="sIs-GN-1VV" id="dSL-Qx-zH4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

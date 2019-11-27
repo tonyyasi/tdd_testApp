@@ -8,6 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		B2015A6398B120D254D6541C /* Pods_tddApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C462EE7F6091F6D47AA8D /* Pods_tddApp.framework */; };
+		D35D88A2238EC4A60071DF27 /* Quadruple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D8896238EC4A60071DF27 /* Quadruple.swift */; };
+		D35D88A3238EC4A60071DF27 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D889A238EC4A60071DF27 /* Function.swift */; };
+		D35D88A4238EC4A60071DF27 /* ExecMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D889B238EC4A60071DF27 /* ExecMemory.swift */; };
+		D35D88A5238EC4A60071DF27 /* SemanticCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D889C238EC4A60071DF27 /* SemanticCube.swift */; };
+		D35D88A6238EC4A60071DF27 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D889D238EC4A60071DF27 /* Memory.swift */; };
+		D35D88A7238EC4A60071DF27 /* VirtualMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D889E238EC4A60071DF27 /* VirtualMachine.swift */; };
+		D35D88A8238EC4A60071DF27 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D889F238EC4A60071DF27 /* Type.swift */; };
+		D35D88A9238EC4A60071DF27 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88A0238EC4A60071DF27 /* Variable.swift */; };
+		D35D88AA238EC4A60071DF27 /* SymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88A1238EC4A60071DF27 /* SymbolTable.swift */; };
+		D35D88B6238EC4B60071DF27 /* tddLexer.interp in Resources */ = {isa = PBXBuildFile; fileRef = D35D88AB238EC4B50071DF27 /* tddLexer.interp */; };
+		D35D88B7238EC4B60071DF27 /* tddListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88AC238EC4B50071DF27 /* tddListener.swift */; };
+		D35D88B8238EC4B60071DF27 /* tdd.g4 in Resources */ = {isa = PBXBuildFile; fileRef = D35D88AD238EC4B50071DF27 /* tdd.g4 */; };
+		D35D88B9238EC4B60071DF27 /* tdd.interp in Resources */ = {isa = PBXBuildFile; fileRef = D35D88AE238EC4B50071DF27 /* tdd.interp */; };
+		D35D88BA238EC4B60071DF27 /* tddBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88AF238EC4B50071DF27 /* tddBaseListener.swift */; };
+		D35D88BB238EC4B60071DF27 /* tddLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88B0238EC4B50071DF27 /* tddLexer.swift */; };
+		D35D88BC238EC4B60071DF27 /* tddLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88B1238EC4B50071DF27 /* tddLexerATN.swift */; };
+		D35D88BD238EC4B60071DF27 /* tdd.tokens in Resources */ = {isa = PBXBuildFile; fileRef = D35D88B2238EC4B50071DF27 /* tdd.tokens */; };
+		D35D88BE238EC4B60071DF27 /* tddParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88B3238EC4B60071DF27 /* tddParser.swift */; };
+		D35D88BF238EC4B60071DF27 /* tddLexer.tokens in Resources */ = {isa = PBXBuildFile; fileRef = D35D88B4238EC4B60071DF27 /* tddLexer.tokens */; };
+		D35D88C0238EC4B60071DF27 /* tddParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88B5238EC4B60071DF27 /* tddParserATN.swift */; };
+		D35D88C2238EC4D10071DF27 /* CompilerInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D88C1238EC4D10071DF27 /* CompilerInstance.swift */; };
 		D361E10F238D0E5500A91DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D361E10E238D0E5500A91DF0 /* AppDelegate.swift */; };
 		D361E111238D0E5500A91DF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D361E110238D0E5500A91DF0 /* SceneDelegate.swift */; };
 		D361E113238D0E5500A91DF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D361E112238D0E5500A91DF0 /* ViewController.swift */; };
@@ -47,6 +68,27 @@
 		153C462EE7F6091F6D47AA8D /* Pods_tddApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tddApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B230D6559D004E8C7F40AA /* Pods-tddApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tddApp.release.xcconfig"; path = "Target Support Files/Pods-tddApp/Pods-tddApp.release.xcconfig"; sourceTree = "<group>"; };
 		CA128D1F9AEE43940EC894E3 /* Pods-tddApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tddApp.debug.xcconfig"; path = "Target Support Files/Pods-tddApp/Pods-tddApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D35D8896238EC4A60071DF27 /* Quadruple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quadruple.swift; sourceTree = "<group>"; };
+		D35D889A238EC4A60071DF27 /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		D35D889B238EC4A60071DF27 /* ExecMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecMemory.swift; sourceTree = "<group>"; };
+		D35D889C238EC4A60071DF27 /* SemanticCube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticCube.swift; sourceTree = "<group>"; };
+		D35D889D238EC4A60071DF27 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		D35D889E238EC4A60071DF27 /* VirtualMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualMachine.swift; sourceTree = "<group>"; };
+		D35D889F238EC4A60071DF27 /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		D35D88A0238EC4A60071DF27 /* Variable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		D35D88A1238EC4A60071DF27 /* SymbolTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolTable.swift; sourceTree = "<group>"; };
+		D35D88AB238EC4B50071DF27 /* tddLexer.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tddLexer.interp; sourceTree = "<group>"; };
+		D35D88AC238EC4B50071DF27 /* tddListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tddListener.swift; sourceTree = "<group>"; };
+		D35D88AD238EC4B50071DF27 /* tdd.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tdd.g4; sourceTree = "<group>"; };
+		D35D88AE238EC4B50071DF27 /* tdd.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tdd.interp; sourceTree = "<group>"; };
+		D35D88AF238EC4B50071DF27 /* tddBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tddBaseListener.swift; sourceTree = "<group>"; };
+		D35D88B0238EC4B50071DF27 /* tddLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tddLexer.swift; sourceTree = "<group>"; };
+		D35D88B1238EC4B50071DF27 /* tddLexerATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tddLexerATN.swift; sourceTree = "<group>"; };
+		D35D88B2238EC4B50071DF27 /* tdd.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tdd.tokens; sourceTree = "<group>"; };
+		D35D88B3238EC4B60071DF27 /* tddParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tddParser.swift; sourceTree = "<group>"; };
+		D35D88B4238EC4B60071DF27 /* tddLexer.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tddLexer.tokens; sourceTree = "<group>"; };
+		D35D88B5238EC4B60071DF27 /* tddParserATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tddParserATN.swift; sourceTree = "<group>"; };
+		D35D88C1238EC4D10071DF27 /* CompilerInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompilerInstance.swift; sourceTree = "<group>"; };
 		D361E10B238D0E5500A91DF0 /* tddApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tddApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D361E10E238D0E5500A91DF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D361E110238D0E5500A91DF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +181,18 @@
 		D361E133238D0E9600A91DF0 /* Compiler */ = {
 			isa = PBXGroup;
 			children = (
+				D35D88AD238EC4B50071DF27 /* tdd.g4 */,
+				D35D88AE238EC4B50071DF27 /* tdd.interp */,
+				D35D88B2238EC4B50071DF27 /* tdd.tokens */,
+				D35D88AF238EC4B50071DF27 /* tddBaseListener.swift */,
+				D35D88AB238EC4B50071DF27 /* tddLexer.interp */,
+				D35D88B0238EC4B50071DF27 /* tddLexer.swift */,
+				D35D88B4238EC4B60071DF27 /* tddLexer.tokens */,
+				D35D88B1238EC4B50071DF27 /* tddLexerATN.swift */,
+				D35D88AC238EC4B50071DF27 /* tddListener.swift */,
+				D35D88B3238EC4B60071DF27 /* tddParser.swift */,
+				D35D88B5238EC4B60071DF27 /* tddParserATN.swift */,
+				D35D88C1238EC4D10071DF27 /* CompilerInstance.swift */,
 			);
 			path = Compiler;
 			sourceTree = "<group>";
@@ -146,6 +200,15 @@
 		D361E134238D0E9E00A91DF0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D35D889B238EC4A60071DF27 /* ExecMemory.swift */,
+				D35D889A238EC4A60071DF27 /* Function.swift */,
+				D35D889D238EC4A60071DF27 /* Memory.swift */,
+				D35D8896238EC4A60071DF27 /* Quadruple.swift */,
+				D35D889C238EC4A60071DF27 /* SemanticCube.swift */,
+				D35D88A1238EC4A60071DF27 /* SymbolTable.swift */,
+				D35D889F238EC4A60071DF27 /* Type.swift */,
+				D35D88A0238EC4A60071DF27 /* Variable.swift */,
+				D35D889E238EC4A60071DF27 /* VirtualMachine.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -234,9 +297,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35D88B8238EC4B60071DF27 /* tdd.g4 in Resources */,
 				D361E11B238D0E5500A91DF0 /* LaunchScreen.storyboard in Resources */,
 				D361E118238D0E5500A91DF0 /* Assets.xcassets in Resources */,
+				D35D88BD238EC4B60071DF27 /* tdd.tokens in Resources */,
 				D361E116238D0E5500A91DF0 /* Main.storyboard in Resources */,
+				D35D88BF238EC4B60071DF27 /* tddLexer.tokens in Resources */,
+				D35D88B9238EC4B60071DF27 /* tdd.interp in Resources */,
+				D35D88B6238EC4B60071DF27 /* tddLexer.interp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +358,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D361E13F238D82CB00A91DF0 /* Code.swift in Sources */,
+				D35D88C0238EC4B60071DF27 /* tddParserATN.swift in Sources */,
+				D35D88A4238EC4A60071DF27 /* ExecMemory.swift in Sources */,
+				D35D88AA238EC4A60071DF27 /* SymbolTable.swift in Sources */,
+				D35D88A7238EC4A60071DF27 /* VirtualMachine.swift in Sources */,
 				D361E113238D0E5500A91DF0 /* ViewController.swift in Sources */,
+				D35D88A3238EC4A60071DF27 /* Function.swift in Sources */,
 				D361E10F238D0E5500A91DF0 /* AppDelegate.swift in Sources */,
+				D35D88A5238EC4A60071DF27 /* SemanticCube.swift in Sources */,
+				D35D88A9238EC4A60071DF27 /* Variable.swift in Sources */,
+				D35D88BC238EC4B60071DF27 /* tddLexerATN.swift in Sources */,
+				D35D88A2238EC4A60071DF27 /* Quadruple.swift in Sources */,
+				D35D88C2238EC4D10071DF27 /* CompilerInstance.swift in Sources */,
 				D361E142238D893500A91DF0 /* Examples.swift in Sources */,
+				D35D88A6238EC4A60071DF27 /* Memory.swift in Sources */,
 				D361E111238D0E5500A91DF0 /* SceneDelegate.swift in Sources */,
+				D35D88BA238EC4B60071DF27 /* tddBaseListener.swift in Sources */,
+				D35D88BB238EC4B60071DF27 /* tddLexer.swift in Sources */,
+				D35D88B7238EC4B60071DF27 /* tddListener.swift in Sources */,
+				D35D88BE238EC4B60071DF27 /* tddParser.swift in Sources */,
+				D35D88A8238EC4A60071DF27 /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

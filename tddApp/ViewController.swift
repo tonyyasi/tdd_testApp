@@ -29,62 +29,62 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // Interact with selected row
         codeTextView.text = examples[row].code
+        mdView.load(markdown: "## Compile the code to see the generated documentation!")
+        
     }
     
     
     @IBAction func onCompileClick(_ sender: UIButton) {
+        
     }
     
     @IBAction func onRunClick(_ sender: UIButton) {
+        
+        let basictext = inputTextView.text
+        let splitText = basictext?.components(separatedBy: "\n")
+        input = splitText ?? []
+        compInstance.run(code: self.codeTextView.text, viewController: self)
+        
     }
     @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBOutlet weak var testSwitch: UISwitch!
     @IBOutlet weak var codeTextView: UITextView!
+    @IBAction func changeSwitch(_ sender: UISwitch) {
+        self.isOn = sender.isOn
+        print("Changing is On")
+    }
     
+    @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var outputTextView: UITextView!
     
     
     let codeSamples = [String]()
-    
+    public var mdView: MarkdownView!
+    let compInstance = CompilerInstance()
     
     func addBorder(textView: UITextView) {
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 0.5
     }
     
+    public func changeDoc(doc: String) {
+        
+    }
+    
+    public var isOn : Bool = true
+    public var input : [Any] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+        isOn = testSwitch.isOn
+        addBorder(textView: inputTextView)
         // Do any additional setup after loading the view.
-        let mdView = MarkdownView()
+         mdView = MarkdownView()
         let documentation = """
-        # Documentation
-        ## nam
-        Ala a
-        ### Parameters:
-        | Type | Name | Description |
-        | --- | --- | --- |
-        | int | a | A value |
-        | int | b | B value |
-        ## suma
-        Function to add two variables
-        ### Parameters:
-        | Type | Name | Description |
-        | --- | --- | --- |
-        | int | a | First value to add |
-        | int | b | Second value to add |
-        ### Returns
-        | Type | Description |
-        | --- | --- |
-        | int | la suma de los dos numeros |
-        ## Tests
-        - **suma**(2,4) => 6
-        - **suma**(120,200) => 320
-        ## noReturn
-        A void function with no params
-        ## noReturnParams
-        A void function with params
+        ## Compile the code to see the generated documentation!
         """
         addBorder(textView: codeTextView)
         addBorder(textView: outputTextView)
