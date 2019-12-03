@@ -39,10 +39,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func onRunClick(_ sender: UIButton) {
-        
+        input = []
         let basictext = inputTextView.text
+        if basictext != "" {
         let splitText = basictext?.components(separatedBy: "\n")
+        
         input = splitText ?? []
+        }
+    
         compInstance.run(code: self.codeTextView.text, viewController: self)
         
     }

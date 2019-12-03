@@ -257,8 +257,8 @@ open class tddBaseListener: tddListener {
         }
         
         print(documentation)
-        for index in 0...inputs.count - 1 {
-            var input = (inputs[index] as! String)
+        for index in 0..<inputs.count {
+            if let input = (inputs[index] as? String) {
             let type = findType(value: input)
             switch type {
             case .int:
@@ -270,15 +270,19 @@ open class tddBaseListener: tddListener {
             case .bool:
                 inputs[index] = input == "true"
             case .char:
-                inputs[index] = input as! Character
+                inputs[index] = input.first!
             default:
                 print("Error parsing inputs")
+                }
             }
         }
         //Temporal VM test
         let vm = VirtualMachine(quadruples: arrayQuads, constantMemory: constantVals, sReads: inputs , testInputs: runTests , outputs: outputs)
         vm.execute()
         outputs = vm.outputs
+        arrayQuads = []
+        tests = []
+        
     }
 
     /**

@@ -23,7 +23,6 @@ class CompilerInstance {
             tddBaseListenerInstance.runTests = viewController.isOn
             tddBaseListenerInstance.inputs = viewController.input
             try walker.walk(tddBaseListenerInstance, tree)
-            print("isOn \(viewController.isOn)")
             viewController.mdView.load(markdown: tddBaseListenerInstance.documentation)
             viewController.outputTextView.text = tddBaseListenerInstance.outputs
         } catch {
